@@ -1,9 +1,9 @@
 preprocess:
-  dataset: BIDMC
+  dataset: PPG-DaLiA
   rawdata_path: ./data/rawdata
   procdata_path: ./data/procdata
   available_dataset: [
-    WildPPG, BIDMC, DaLiA, MIMIC-BP, UCI-BP, WESAD
+    WildPPG, BIDMC, PPG-DaLiA, MIMIC-BP, UCI-BP, WESAD
   ]
   resample_rate: 128
   segment_len: 4

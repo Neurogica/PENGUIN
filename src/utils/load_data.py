@@ -77,9 +77,9 @@ def load_WildPPG(sub_idx, cfg, dataset_cfg):
     return x_data, y_data
 
 
-@register_dataset("DaLiA")
-def load_DaLiA(sub_idx, cfg, dataset_cfg):
-    with open(f"{cfg.preprocess.rawdata_path}/DaLiA/PPG_FieldStudy/S{sub_idx + 1}/S{sub_idx + 1}.pkl", "rb") as f:
+@register_dataset("PPG-DaLiA")
+def load_PPG_DaLiA(sub_idx, cfg, dataset_cfg):
+    with open(f"{cfg.preprocess.rawdata_path}/PPG-DaLiA/PPG_FieldStudy/S{sub_idx + 1}/S{sub_idx + 1}.pkl", "rb") as f:
         sub_data = pickle.load(f, encoding="latin1")
     ecg_data = sub_data["signal"]["chest"]["ECG"].squeeze()
     ppg_data = sub_data["signal"]["wrist"]["BVP"].squeeze()

@@ -4,9 +4,9 @@ train:
     PaPaGei-S, RDDM, RespDiff, CycleGAN, PENGUIN
   ]
 
-  dataset: DaLiA
+  dataset: PPG-DaLiA
   available_dataset: [
-    WildPPG, BIDMC, DaLiA, MIMIC-BP, UCI-BP, WESAD
+    WildPPG, BIDMC, PPG-DaLiA, MIMIC-BP, UCI-BP, WESAD
   ]
 
   training:

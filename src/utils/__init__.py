@@ -7,7 +7,7 @@ from models import (
 )
 from utils.load_data import (
     load_BIDMC,
-    load_DaLiA,
+    load_PPG_DaLiA,
     load_MIMIC_BP,
     load_UCI_BP,
     load_WESAD,
@@ -17,7 +17,7 @@ from utils.load_data import (
 load_data = [
     "load_WildPPG",
     "load_BIDMC",
-    "load_DaLiA",
+    "load_PPG-DaLiA",
     "load_MIMIC-BP",
     "load_UCI-BP",
     "load_WESAD",
