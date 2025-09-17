@@ -8,8 +8,6 @@ This repository provides the implementation of **PENGUIN**, as presented in our 
 It includes code, dataset preparation instructions, and scripts for training and evaluation.
 
 ## 🛠️ Getting Started
-
-### 1: Installation
 Clone the repository and set up the environment:
 ```bash
 git clone git@github.com:Neurogica/PENGUIN.git
@@ -20,7 +18,7 @@ source .venv/bin/activate
 uv sync
 ```
 
-### 2: Data Preparation
+## 📊 Data Preparation
 Create the folder `./data/rawdata/{dataset_name}` and place the corresponding dataset files inside it.\
 You can manually download the datasets from the following sources:
 - PPG-DaLiA: https://archive.ics.uci.edu/dataset/495/ppg+dalia
@@ -43,7 +41,7 @@ The directory structure should look like the following example (for WildPPG):
             └── ...
 ```
 
-## 📊 Experiments
+## 🎯 Experiments
 To run experiments, first preprocess the dataset using `./src/preprocess.py`, then train the model using `./src/training.py`.\
 Detailed configs are provided in `./configs/`.
 
