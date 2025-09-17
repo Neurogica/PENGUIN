@@ -1,0 +1,39 @@
+models:
+  PENGUIN:
+    lr: 0.001
+    n_step: 25
+    h_dim: 128
+    ssm_block_num: 4
+    ssm_ratio: 2.0
+    mlp_ratio: 2.0
+
+  PaPaGei-S:
+    ckpt_path: "./ckpt/PaPaGei_S.pt"
+    lr: 0.001
+    base_filters: 32
+    kernel_size: 3
+    stride: 2
+    groups: 1
+    n_block: 18
+    n_classes: 512 # Embedding dimension
+    n_experts: 3
+
+  RDDM:
+    lr: 0.0001
+    betas: [0.0001, 0.02]
+    alphas: [100, 1]
+    n_T: 10
+    num_heads: 8 # original 8
+    roi_size: 32
+  
+  RespDiff:
+    lr: 0.0001
+    input_dim: 384
+    hidden_dim: 1024
+    num_layers: 6
+    output_dim: 128
+    n_samples: 6
+
+  CycleGAN:
+    lr: 0.0002
+    lambdas: [10, 10]

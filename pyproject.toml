@@ -1,0 +1,33 @@
+[project]
+    name = "penguin"
+    version = "0.1.0"
+    description = "Add your description here"
+    readme = "README.md"
+    requires-python = ">=3.12"
+    dependencies = [
+        "biosppy>=2.2.3",
+        "hydra-core>=1.3.2",
+        "neurokit2>=0.2.12",
+        "scipy>=1.16.2",
+        "thop>=0.1.1.post2209072238",
+        "torch>=2.8.0",
+        "tqdm>=4.67.1",
+        "wandb>=0.21.4"
+    ]
+
+[tool.ruff]
+    exclude        = [".venv", ".ruff_cache"]
+    line-length    = 150
+    indent-width   = 4
+    target-version = "py38"
+
+    [tool.ruff.lint]
+        select = [
+            "F", # Flake8
+            "B", # Black
+            "I", # isort
+            "E", # error
+            "W"  # warning
+        ]
+        ignore = ["F401", "E731"]
+        fixable = ["ALL"]

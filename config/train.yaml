@@ -1,0 +1,39 @@
+train:
+  model: PENGUIN
+  available_model: [
+    PaPaGei-S, RDDM, RespDiff, CycleGAN, PENGUIN
+  ]
+
+  dataset: DaLiA
+  available_dataset: [
+    WildPPG, BIDMC, DaLiA, MIMIC-BP, UCI-BP, WESAD
+  ]
+
+  training:
+    epoch_num: 300
+    batch_size: 64
+    weight_decay: 0.01
+    ema_decay: 0.999
+    fold_num: 8
+    earlystop_metric: "mae"  # "mae" or "loss"
+    earlystop_patience: 10
+    monitor_val: true
+  
+  task_specific_metrics:
+    ECG: [HeartRateError]
+    ABP: [SBPError, DBPError]
+    Resp: [RespRateError]
+    window_size:
+      HeartRateError: 8
+      SBPError: 8
+      DBPError: 8
+      RespRateError: 60
+
+  logging:
+    wandb: false
+    qual_plot: true
+    qual_plot_num: 20
+    description: ""
+    log_path: "./logs"
+    ckpt_folder: "/ckpt"
+    plot_folder: "/plot"

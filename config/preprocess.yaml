@@ -1,0 +1,87 @@
+preprocess:
+  dataset: BIDMC
+  rawdata_path: ./data/rawdata
+  procdata_path: ./data/procdata
+  available_dataset: [
+    WildPPG, BIDMC, DaLiA, MIMIC-BP, UCI-BP, WESAD
+  ]
+  resample_rate: 128
+  segment_len: 4
+  ppg_bandpass: True
+  ppg_freq_range: [0.5, 4]
+  ppg_zscore: True
+  ppg_normalize: True
+
+  WildPPG:
+    duration: 867.15
+    subject_num: 16
+    sample_num: 390216
+    ppg_fs: 128 # Hz
+    colors: [g,]
+    locations: [sternum, head, wrist, ankle]
+    label: ECG
+    label_fs: 128 # Hz
+    label_bandpass: True
+    label_freq_range: [0.5, -1]
+    label_zscore: True
+    label_normalize: True
+
+  DaLiA:
+    duration: 35.96
+    subject_num: 15
+    sample_num: 16181
+    ppg_fs: 64 # Hz
+    label: ECG
+    label_fs: 700 # Hz
+    label_bandpass: True
+    label_freq_range: [0.5, -1]
+    label_zscore: True
+    label_normalize: True
+
+  UCI-BP:
+    duration: 791.64
+    subject_num: 8
+    sample_num: 356240
+    ppg_fs: 125 # Hz
+    label: ABP
+    label_fs: 125 # Hz
+    label_bandpass: False
+    label_freq_range: [-1, -1]
+    label_zscore: False
+    label_normalize: False
+  
+  MIMIC-BP:
+    duration: 304.80
+    subject_num: 1524
+    sample_num: 137160
+    ppg_fs: 125 # Hz
+    label: ABP
+    label_fs: 125 # Hz
+    label_bandpass: False
+    label_freq_range: [-1, -1]
+    label_zscore: False
+    label_normalize: False
+  
+  WESAD:
+    duration: 24.11
+    subject_num: 15
+    sample_num: 10851
+    ppg_fs: 64 # Hz
+    label: Resp
+    label_fs: 700 # Hz
+    label_bandpass: True
+    label_freq_range: [-1, 1]
+    label_zscore: True
+    label_normalize: True
+
+  BIDMC:
+    duration: 7.07
+    subject_num: 53
+    sample_num: 3180
+    ppg_fs: 125 # Hz
+    label: Resp
+    label_fs: 125 # Hz
+    label_bandpass: True
+    label_freq_range: [-1, 1]
+    label_zscore: True
+    label_normalize: True
