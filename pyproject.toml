@@ -6,7 +6,7 @@
     requires-python = ">=3.12"
     dependencies = [
         "biosppy>=2.2.3",
-        "hydra-core>=1.3.2",
+        "hydra-core>=1.3.4",
         "neurokit2>=0.2.12",
         "scipy>=1.16.2",
         "thop>=0.1.1.post2209072238",
