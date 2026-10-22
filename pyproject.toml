@@ -31,3 +31,6 @@
         ]
         ignore = ["F401", "E731"]
         fixable = ["ALL"]
+
+[tool.uv]
+constraint-dependencies = ["certifi>=2026.10.19"]
